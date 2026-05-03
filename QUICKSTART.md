@@ -5,18 +5,21 @@
 Your full-stack Content Management System is ready to deploy! Here's what's included:
 
 ### Frontend (Next.js 14)
+
 - Modern React component architecture
 - Clean, responsive UI
 - Real-time content management interface
 - API integration with the backend
 
 ### Backend (Node.js + Express)
+
 - RESTful API with CRUD operations
 - SQLite database (auto-initialized)
 - CORS enabled for frontend communication
 - Error handling and validation
 
 ### Database (SQLite)
+
 - Auto-created on first run
 - Stores content with timestamps
 - Simple schema optimized for fast setup
@@ -26,23 +29,27 @@ Your full-stack Content Management System is ready to deploy! Here's what's incl
 ## 📋 Local Setup (Quick Test)
 
 ### Windows Users
+
 ```
 Double-click: install.bat
 ```
 
 ### Mac/Linux Users
+
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
 
 ### Manual Installation
+
 ```bash
 npm run install:all
 npm run dev
 ```
 
 Then open:
+
 - **Frontend**: http://localhost:3000
 - **Backend**: http://localhost:5000/api/health
 
@@ -125,13 +132,13 @@ content_man_checkpoint/
 
 ## 🔌 API Documentation
 
-| Method | Endpoint | Purpose |
-|--------|----------|---------|
-| GET | `/api/contents` | Get all contents |
-| POST | `/api/contents` | Create content |
-| PUT | `/api/contents/:id` | Update content |
-| DELETE | `/api/contents/:id` | Delete content |
-| GET | `/api/health` | Backend health check |
+| Method | Endpoint            | Purpose              |
+| ------ | ------------------- | -------------------- |
+| GET    | `/api/contents`     | Get all contents     |
+| POST   | `/api/contents`     | Create content       |
+| PUT    | `/api/contents/:id` | Update content       |
+| DELETE | `/api/contents/:id` | Delete content       |
+| GET    | `/api/health`       | Backend health check |
 
 ---
 
@@ -143,13 +150,14 @@ content_man_checkpoint/
 ✅ Full-stack integration  
 ✅ Database persistence  
 ✅ Error handling  
-✅ Ready for production  
+✅ Ready for production
 
 ---
 
 ## 🎯 Next Steps
 
 1. **Push to GitHub**
+
    ```bash
    git remote add origin https://github.com/YOUR_USERNAME/cms-fullstack.git
    git push -u origin main
@@ -171,6 +179,7 @@ content_man_checkpoint/
 ## 📞 Support
 
 See **DEPLOYMENT.md** for:
+
 - Detailed step-by-step instructions
 - Troubleshooting tips
 - Production optimization

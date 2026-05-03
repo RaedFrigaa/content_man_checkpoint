@@ -139,11 +139,13 @@ Once everything is deployed:
 ## Troubleshooting
 
 **Frontend can't connect to backend?**
+
 - Check `NEXT_PUBLIC_API_URL` environment variable in Vercel
 - Ensure backend is running and accessible
 - Check CORS is enabled in backend
 
 **Backend database not persisting?**
+
 - SQLite files won't persist on serverless (data lost on restart)
 - For production, use a proper database: MongoDB, PostgreSQL, etc.
 

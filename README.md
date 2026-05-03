@@ -5,6 +5,7 @@ A full-stack content management website built with **Next.js** (frontend), **Nod
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 16+ installed
 - npm or yarn
 
@@ -47,18 +48,19 @@ npm run build
 
 ## 🔌 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/contents` | Fetch all contents |
-| GET | `/api/contents/:id` | Fetch single content |
-| POST | `/api/contents` | Create new content |
-| PUT | `/api/contents/:id` | Update content |
-| DELETE | `/api/contents/:id` | Delete content |
-| GET | `/api/health` | Health check |
+| Method | Endpoint            | Description          |
+| ------ | ------------------- | -------------------- |
+| GET    | `/api/contents`     | Fetch all contents   |
+| GET    | `/api/contents/:id` | Fetch single content |
+| POST   | `/api/contents`     | Create new content   |
+| PUT    | `/api/contents/:id` | Update content       |
+| DELETE | `/api/contents/:id` | Delete content       |
+| GET    | `/api/health`       | Health check         |
 
 ## 📝 Request Example
 
 **Create Content:**
+
 ```json
 POST /api/contents
 {
@@ -70,6 +72,7 @@ POST /api/contents
 ## 🗄️ Database
 
 SQLite database (`cms.db`) is automatically created with:
+
 - **Table**: `contents`
 - **Columns**: `id`, `title`, `description`, `created_at`, `updated_at`
 
@@ -94,7 +97,7 @@ The backend can be deployed as serverless functions or to Heroku/Railway for fre
 ✅ Real-time content management  
 ✅ CORS enabled for frontend-backend communication  
 ✅ Error handling and validation  
-✅ Responsive design  
+✅ Responsive design
 
 ## 💡 Future Enhancements
 

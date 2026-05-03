@@ -1,28 +1,28 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function ContentForm({ onSubmit }) {
   const [formData, setFormData] = useState({
-    title: '',
-    description: ''
-  })
+    title: "",
+    description: "",
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (formData.title.trim() && formData.description.trim()) {
-      onSubmit(formData)
-      setFormData({ title: '', description: '' })
+      onSubmit(formData);
+      setFormData({ title: "", description: "" });
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="card">
@@ -52,5 +52,5 @@ export default function ContentForm({ onSubmit }) {
       </div>
       <button type="submit">Create Content</button>
     </form>
-  )
+  );
 }
