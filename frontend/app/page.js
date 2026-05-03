@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import axios from "axios";
 import ContentForm from "@/components/ContentForm";
 import ContentList from "@/components/ContentList";
 
@@ -16,8 +15,10 @@ export default function Home() {
   const fetchContents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/api/contents`);
-      setContents(response.data);
+      const response = await fetch(`${API_URL}/api/contents`);
+      if (!response.ok) throw new Error("Failed to fetch");
+      const data = await response.json();
+      setContents(data);
       setError("");
     } catch (err) {
       setError("Failed to load contents");
@@ -33,7 +34,12 @@ export default function Home() {
 
   const handleCreate = async (formData) => {
     try {
-      await axios.post(`${API_URL}/api/contents`, formData);
+      const response = await fetch(`${API_URL}/api/contents`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) throw new Error("Failed to create");
       setSuccess("Content created successfully!");
       setTimeout(() => setSuccess(""), 3000);
       fetchContents();
@@ -46,7 +52,10 @@ export default function Home() {
   const handleDelete = async (id) => {
     if (!confirm("Are you sure?")) return;
     try {
-      await axios.delete(`${API_URL}/api/contents/${id}`);
+      const response = await fetch(`${API_URL}/api/contents/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) throw new Error("Failed to delete");
       setSuccess("Content deleted successfully!");
       setTimeout(() => setSuccess(""), 3000);
       fetchContents();
